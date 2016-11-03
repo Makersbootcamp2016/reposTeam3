@@ -537,8 +537,8 @@ h2.title {
   height: 100%;
   content: "";
   display: block;
-  background: #FFFFFF;
-  opacity: .80;
+  background: #ffff66;
+  opacity: 0.3;
 }
 .sidebar .logo,
 .off-canvas-sidebar .logo {
@@ -564,6 +564,9 @@ h2.title {
   color: #FFFFFF;
   line-height: 20px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.sidebar .logo .picture-container{
+  text-align: center;
 }
 .sidebar .logo .simple-text,
 .off-canvas-sidebar .logo .simple-text {
@@ -3332,7 +3335,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   border-bottom: 0;
 }
 .navbar.navbar-transparent .logo-container .brand {
-  color: #FFFFFF;
+  color: #ffaf1a;
 }
 .navbar-fixed-top {
   border-radius: 0;
