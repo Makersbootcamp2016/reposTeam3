@@ -63,7 +63,7 @@ def shot():
    return 'ERROR: You\'re lost Dave..'
 
 
-@app.route("/maps.html")
+@app.route("/maps")
 def maps():
     page = jinja_env.get_template('localization.html')
     return page.render()
