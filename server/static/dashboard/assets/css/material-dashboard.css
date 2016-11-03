@@ -537,8 +537,8 @@ h2.title {
   height: 100%;
   content: "";
   display: block;
-  background: #ffff66;
-  opacity: 0.3;
+  background: #FFFFFF;
+  opacity: .8;
 }
 .sidebar .logo,
 .off-canvas-sidebar .logo {
