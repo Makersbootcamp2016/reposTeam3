@@ -23,14 +23,15 @@ def home():
     noise = round(resultat['data']['sensors'][7]['value'],2)
     pollutionno2 = round(resultat['data']['sensors'][4]['value'],2)
     pollutionco = round(resultat['data']['sensors'][5]['value'],2)
-
+    light = round(resultat['data']['sensors'][0]['value'],2)
     page = jinja_env.get_template('base.html')
-    return page.render(emplacement1=battery, emplacement2=humidity, emplacement3=temperature, emplacement4=noise, emplacement5=pollutionno2, emplacement6=pollutionco)
+    return page.render(emplacement1=battery, emplacement2=humidity, emplacement3=temperature, emplacement4=noise, emplacement5=pollutionno2, emplacement6=pollutionco, emplacement7=light)
 
 @app.route("/profiles")
 def profiles():
     page = jinja_env.get_template('profiles.html')
     return page.render()
+
 
 @app.route("/clak")
 def clak():
@@ -57,5 +58,15 @@ def shot():
    return 'ERROR: You\'re lost Dave..'
 
 
+@app.route("/maps.html")
+def maps():
+    page = jinja_env.get_template('profiles.html')
+    return page.render()
+
+@app.route("/contacts")
+def contacts():
+    page = jinja_env.get_template('contacts.html')
+    return page.render()
+
 if __name__ == "__main__":
-    app.run()
+    app.run(port=10000)

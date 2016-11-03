@@ -537,8 +537,8 @@ h2.title {
   height: 100%;
   content: "";
   display: block;
-  background: #ffff66;
-  opacity: 0.3;
+  background: #FFFFFF;
+  opacity: .8;
 }
 .sidebar .logo,
 .off-canvas-sidebar .logo {
@@ -3330,12 +3330,12 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   background-color: #3f51b5;
 }
 .navbar.navbar-transparent {
-  background-color: transparent;
+  background-color: #ffaf1a;
   box-shadow: none;
   border-bottom: 0;
 }
 .navbar.navbar-transparent .logo-container .brand {
-  color: #ffaf1a;
+  color: #FFFFFF;
 }
 .navbar-fixed-top {
   border-radius: 0;
