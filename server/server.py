@@ -18,8 +18,12 @@ def home():
     battery = resultat['data']['sensors'][0]['value']
     humidity = resultat['data']['sensors'][1]['value']
     temperature = resultat['data']['sensors'][2]['value']
+    noise = resultat['data']['sensors'][6]['value']
+    pollutionno2 = resultat['data']['sensors'][3]['value']
+    pollutionco = resultat['data']['sensors'][4]['value']
+
     page = jinja_env.get_template('base.html')
-    return page.render(emplacement1=battery, emplacement2=humidity, emplacement3=temperature)
+    return page.render(emplacement1=battery, emplacement2=humidity, emplacement3=temperature, emplacement4=noise, emplacement5=pollutionno2, emplacement6=pollutionco)
 
 @app.route("/profiles")
 def profiles():
