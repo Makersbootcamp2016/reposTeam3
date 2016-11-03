@@ -33,12 +33,12 @@ def profiles():
 #<<<<<<< Updated upstream
 @app.route("/maps.html")
 def maps():
+    page = jinja_env.get_template('localization.html')
+    return page.render()
 
-    page = jinja_env.get_template('profiles.html')
-@app.route("/contacts")
+@app.route("/contacts.html")
 def contacts():
     page = jinja_env.get_template('contacts.html')
-#>>>>>>> Stashed changes
     return page.render()
 
 if __name__ == "__main__":

@@ -3738,6 +3738,12 @@ footer .btn {
   float: left;
   text-align: center;
 }
+.card-stats .card-header1 {
+  float: left;
+  text-align: center;
+  width: 120px;
+  height: 150px;
+}
 .card-stats .card-header i {
   font-size: 36px;
   line-height: 56px;
