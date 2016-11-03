@@ -29,8 +29,10 @@ def home():
     pollutionno2 = round(resultat['data']['sensors'][4]['value'],2)
     pollutionco = round(resultat['data']['sensors'][5]['value'],2)
     light = round(resultat['data']['sensors'][0]['value'],2)
+    latitude = resultat['data']['location']['latitude']
+    longitude = resultat['data']['location']['longitude']
     page = jinja_env.get_template('base.html')
-    return page.render(emplacement1=battery, emplacement2=humidity, emplacement3=temperature, emplacement4=noise, emplacement5=pollutionno2, emplacement6=pollutionco, emplacement7=light)
+    return page.render(emplacement1=battery, emplacement2=humidity, emplacement3=temperature, emplacement4=noise, emplacement5=pollutionno2, emplacement6=pollutionco, emplacement7=light, emplacement8=latitude, emplacement9=longitude)
 
 @app.route("/profiles")
 def profiles():
