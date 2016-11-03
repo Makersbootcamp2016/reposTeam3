@@ -3,6 +3,8 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
+import time
+
 from flask import Flask
 app = Flask(__name__)
 
@@ -29,6 +31,31 @@ def home():
 def profiles():
     page = jinja_env.get_template('profiles.html')
     return page.render()
+
+@app.route("/clak")
+def clak():
+    time.sleep(15)
+    return "YES"
+
+# Upload snapshot
+@app.route("/shot", methods=['POST'])
+def shot():
+   if request.method == 'POST':
+       # check if the post request has the file part
+       if 'image' not in request.files:
+           return 'ERROR: No file..'
+
+       file = request.files['image']
+       if not file or file.filename == '':
+           return 'ERROR: Wrong file..'
+
+       # Save Snapshot with Timestamp
+       filepath = os.path.join(os.path.dirname(os.path.abspath(__file__))+'/static/upload/', "usershot.jpg")
+       file.save(filepath)
+       print ("picture taken and saved")
+       return 'SUCCESS'
+   return 'ERROR: You\'re lost Dave..'
+
 
 if __name__ == "__main__":
     app.run()
