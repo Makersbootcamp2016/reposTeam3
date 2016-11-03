@@ -3330,7 +3330,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   background-color: #3f51b5;
 }
 .navbar.navbar-transparent {
-  background-color: transparent;
+  background-color: #ffaf1a;
   box-shadow: none;
   border-bottom: 0;
 }
