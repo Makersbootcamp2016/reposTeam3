@@ -21,5 +21,10 @@ def home():
     page = jinja_env.get_template('base.html')
     return page.render(emplacement1=battery, emplacement2=humidity, emplacement3=temperature)
 
+@app.route("/profiles")
+def profiles():
+    page = jinja_env.get_template('profiles.html')
+    return page.render()
+
 if __name__ == "__main__":
     app.run()
