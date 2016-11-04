@@ -29,10 +29,8 @@ def home():
     pollutionno2 = round(resultat['data']['sensors'][4]['value'],2)
     pollutionco = round(resultat['data']['sensors'][5]['value'],2)
     light = round(resultat['data']['sensors'][0]['value'],2)
-    latitude = resultat['data']['location']['latitude']
-    longitude = resultat['data']['location']['longitude']
     page = jinja_env.get_template('base.html')
-    return page.render(activedashboard= 'class="active"', emplacement1=battery, emplacement2=humidity, emplacement3=temperature, emplacement4=noise, emplacement5=pollutionno2, emplacement6=pollutionco, emplacement7=light, emplacement8=latitude, emplacement9=longitude)
+    return page.render(activedashboard= 'class="active"', emplacement1=battery, emplacement2=humidity, emplacement3=temperature, emplacement4=noise, emplacement5=pollutionno2, emplacement6=pollutionco, emplacement7=light)
 
 @app.route("/profiles")
 def profiles():
@@ -72,8 +70,13 @@ def shot():
 
 @app.route("/maps")
 def maps():
+    import requests
+    data = requests.get('https://api.smartcitizen.me/v0/devices/3740')
+    resultat = data.json()
+    latitude = resultat['data']['location']['latitude']
+    longitude = resultat['data']['location']['longitude']
     page = jinja_env.get_template('localization.html')
-    return page.render(activemaps= 'class="active"')
+    return page.render(activemaps= 'class="active"', emplacement8=latitude, emplacement9=longitude)
 
 @app.route("/contacts")
 def contacts():
