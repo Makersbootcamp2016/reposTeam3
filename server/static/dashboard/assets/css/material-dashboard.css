@@ -2898,8 +2898,10 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   position: relative;
   height: 50px;
   line-height: 30px;
-  color: inherit;
+  color: white;
   padding: 10px 15px;
+  font-weight: 900;
+
 }
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
   color: inherit;
@@ -3480,6 +3482,7 @@ footer .copyright .material-icons {
   font-size: 18px;
   position: relative;
   top: 3px;
+  color:black;
 }
 footer .btn {
   margin-top: 0;
