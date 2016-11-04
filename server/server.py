@@ -81,7 +81,7 @@ def maps():
 @app.route("/contacts")
 def contacts():
     page = jinja_env.get_template('contacts.html')
-    return page.render(activeicons= 'class="active"')
+    return page.render(activecontact= 'class="active"')
 
 if __name__ == "__main__":
     app.run(port=10000)

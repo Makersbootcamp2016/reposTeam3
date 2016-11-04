@@ -5,12 +5,13 @@
 </head>
 <body>
   <div class="wrapper">
-    {% include 'sidebar.html' %}
-  </div>
-  <div class="main-panel">
-    {% include 'navbar.html' %}
-    {% include 'contentcontacts.html' %}
-    {%include'localization.html'%}
+    <div class="sidebar-wrapper">
+      {% include 'sidebar.html' %}
+    </div>
+    <div class="main-panel">
+      {% include 'navbar.html' %}
+      {% include 'content.html' %}
+    </div>
   </div>
 </body>
 </html>
