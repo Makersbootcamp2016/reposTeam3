@@ -40,9 +40,9 @@ def profiles():
     return page.render()
 
 @app.route("/typography")
-    def profiles():
-        page = jinja_env.get_template('typography.html')
-        return page.render()
+def typo():
+    page = jinja_env.get_template('typography.html')
+    return page.render()
 
 
 @app.route("/clak")
