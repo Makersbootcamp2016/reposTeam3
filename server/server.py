@@ -42,7 +42,7 @@ def profiles():
 @app.route("/typography")
 def typo():
     page = jinja_env.get_template('typography.html')
-    return page.render()
+    return page.render(activetypography= 'class="active"')
 
 
 @app.route("/clak")
