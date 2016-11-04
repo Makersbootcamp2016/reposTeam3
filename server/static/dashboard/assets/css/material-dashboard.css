@@ -2898,9 +2898,9 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   position: relative;
   height: 50px;
   line-height: 30px;
-  color: black;
+  color: white;
   padding: 10px 15px;
-  font-weight: bold;
+  font-weight: 900;
 
 }
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
