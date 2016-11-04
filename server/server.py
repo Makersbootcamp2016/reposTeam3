@@ -39,6 +39,11 @@ def profiles():
     page = jinja_env.get_template('profiles.html')
     return page.render(activeprofiles= 'class="active"')
 
+@app.route("/typography")
+def typo():
+    page = jinja_env.get_template('typography.html')
+    return page.render()
+
 
 @app.route("/clak")
 def clak():
