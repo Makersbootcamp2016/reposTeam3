@@ -32,12 +32,12 @@ def home():
     latitude = resultat['data']['location']['latitude']
     longitude = resultat['data']['location']['longitude']
     page = jinja_env.get_template('base.html')
-    return page.render(emplacement1=battery, emplacement2=humidity, emplacement3=temperature, emplacement4=noise, emplacement5=pollutionno2, emplacement6=pollutionco, emplacement7=light, emplacement8=latitude, emplacement9=longitude)
+    return page.render(activedashboard= 'class="active"', emplacement1=battery, emplacement2=humidity, emplacement3=temperature, emplacement4=noise, emplacement5=pollutionno2, emplacement6=pollutionco, emplacement7=light, emplacement8=latitude, emplacement9=longitude)
 
 @app.route("/profiles")
 def profiles():
     page = jinja_env.get_template('profiles.html')
-    return page.render()
+    return page.render(activeprofiles= 'class="active"')
 
 
 @app.route("/clak")
@@ -68,12 +68,12 @@ def shot():
 @app.route("/maps")
 def maps():
     page = jinja_env.get_template('localization.html')
-    return page.render()
+    return page.render(activemaps= 'class="active"')
 
 @app.route("/contacts")
 def contacts():
     page = jinja_env.get_template('contacts.html')
-    return page.render()
+    return page.render(activeicons= 'class="active"')
 
 if __name__ == "__main__":
     app.run(port=10000)
